@@ -106,6 +106,13 @@ kubectl apply -f https://raw.githubusercontent.com/rancher/local-path-provisione
 * **Kubelet fails to start**: Verify swap is disabled, containerd is running, and required kernel modules are loaded.
 * **Worker node stuck in `NotReady`**: Ensure network connectivity to control plane and correct `kubeadm join` token is used.
 
+## References
+
+* [Install kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
+* [Configure cgroup driver](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/configure-cgroup-driver/)
+* [Containerd setup](https://kubernetes.io/docs/setup/production-environment/container-runtimes/#containerd)
+* [Create cluster with kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/)
+* [Rancher Local Path Provisioner](https://github.com/rancher/local-path-provisioner)
 
 
 ## License
