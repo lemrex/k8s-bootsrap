@@ -65,12 +65,12 @@ Run the worker node script to:
 Example:
 
 ```bash
-sudo ./install-worker.sh "<kubeadm-join-command>"
+sudo ./install-worker.sh 
 ```
 
-> Replace `<kubeadm-join-command>` with the actual command generated on the control plane.
+> Run the `<kubeadm-join-command>` with the actual command generated on the control plane.
 
----
+
 
 ## Scripts Overview
 
