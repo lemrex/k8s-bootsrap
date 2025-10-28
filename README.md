@@ -20,7 +20,7 @@ This repository contains installation scripts to set up a **Kubernetes cluster**
 
 ## Prerequisites
 
-- Ubuntu 20.04 / 22.04 or compatible OS  
+- Ubuntu 22.04 / 24.04 or compatible OS  
 - Minimum hardware:
   - **Control plane:** 2 CPU, 4GB RAM
   - **Worker node:** 1 CPU, 2GB RAM  
@@ -77,10 +77,9 @@ sudo ./install-worker.sh "<kubeadm-join-command>"
 
 | Script                     | Purpose                                                      |
 | -------------------------- | ------------------------------------------------------------ |
-| `install-control-plane.sh` | Sets up the Kubernetes control plane node                    |
-| `install-worker.sh`        | Sets up a Kubernetes worker node and joins it to the cluster |
-| `disable-swap.sh`          | Utility script to safely disable swap on any node            |
-| `check-requirements.sh`    | Optional pre-flight checks (CPU, swap, OS version, etc.)     |
+| `control-plane.sh` | Sets up the Kubernetes control plane node                    |
+| `worker.sh`        | Sets up a Kubernetes worker node and joins it to the cluster |
+
 
 ---
 
@@ -97,13 +96,7 @@ kubectl cluster-info
 * Apply additional storage classes if needed:
 
 ```bash
-kubectl apply -f storage/local-path-storage.yaml
-```
-
-* Distribute kubeconfig to your team:
-
-```bash
-scp ~/.kube/config user@remote-host:~/.kube/config
+kubectl apply -f https://raw.githubusercontent.com/rancher/local-path-provisioner/master/deploy/local-path-storage.yaml
 ```
 
 ---
@@ -125,7 +118,7 @@ This repository is licensed under the MIT License. See [LICENSE](LICENSE) for de
 ## Author
 
 Raphael ([@lemrex](https://github.com/lemrex))
-Solution Architect | Huawei Cloud Nigeria
+
 
 ```
 
