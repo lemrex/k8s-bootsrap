@@ -29,7 +29,7 @@ This repository contains installation scripts to set up a **Kubernetes cluster**
 - Hostname configured on each node (unique for each node)  
 - SSH access for running the scripts  
 
----
+
 
 ## Cluster Setup
 
