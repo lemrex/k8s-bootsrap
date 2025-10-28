@@ -3,7 +3,7 @@
 
 This repository contains installation scripts to set up a **Kubernetes cluster** with separate **control plane (master) nodes** and **worker nodes** on Ubuntu-based systems. The scripts automate the installation of all required dependencies, container runtime, and Kubernetes components.
 
----
+
 
 ## Table of Contents
 
@@ -16,7 +16,6 @@ This repository contains installation scripts to set up a **Kubernetes cluster**
 - [Troubleshooting](#troubleshooting)  
 - [License](#license)  
 
----
 
 ## Prerequisites
 
@@ -52,7 +51,7 @@ sudo ./install-control-plane.sh
 
 > The script outputs the `kubeadm join` command to add worker nodes.
 
----
+
 
 ### Worker Node
 
@@ -81,7 +80,7 @@ sudo ./install-worker.sh "<kubeadm-join-command>"
 | `worker.sh`        | Sets up a Kubernetes worker node and joins it to the cluster |
 
 
----
+
 
 ## Post Installation
 
@@ -99,7 +98,7 @@ kubectl cluster-info
 kubectl apply -f https://raw.githubusercontent.com/rancher/local-path-provisioner/master/deploy/local-path-storage.yaml
 ```
 
----
+
 
 ## Troubleshooting
 
@@ -107,13 +106,12 @@ kubectl apply -f https://raw.githubusercontent.com/rancher/local-path-provisione
 * **Kubelet fails to start**: Verify swap is disabled, containerd is running, and required kernel modules are loaded.
 * **Worker node stuck in `NotReady`**: Ensure network connectivity to control plane and correct `kubeadm join` token is used.
 
----
+
 
 ## License
 
 This repository is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
----
 
 ## Author
 
